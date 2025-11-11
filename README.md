@@ -15,3 +15,12 @@ put service, timer files in /etc/systemd/system
 ```
 
 
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  sudo systemctl list-timers
+  sudo journalctl -u move_delete -r
+```
+
