@@ -1,0 +1,17 @@
+# /etc/systemd/system/move_old.timer
+
+[Unit]
+Description=move old files timer
+
+[Timer]
+# OnCalendar=
+# Use this format for precise, time-based scheduling.
+# *:0/30:00 means "every 30 minutes starting at the 0th minute of the hour" 
+# e.g., 00:00, 00:30, 01:00, 01:30, etc.
+OnCalendar=*:05
+Unit=move_old.service
+
+
+[Install]
+# This section ensures the timer starts automatically at boot.
+WantedBy=timers.target

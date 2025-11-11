@@ -1,0 +1,16 @@
+{
+    "file_mover_config": [
+        {
+            "source_path": "/mnt/sda1/data1",
+            "target_path": "/mnt/sda1/archive/data1",
+            "age_threshold_hours": 24,  
+            "deletion_threshold_hours": 230
+        },
+        {
+            "source_path": "/mnt/sda1/data2",
+            "target_path": "/mnt/sda1/archive/data2",
+            "age_threshold_hours": 24,     
+            "deletion_threshold_hours": 230
+        }
+    ]
+}

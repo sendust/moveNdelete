@@ -1,0 +1,26 @@
+# /etc/systemd/system/move_old.service
+
+[Unit]
+Description=My Periodic Python Job
+# The 'Requires' and 'After' ensure the service is only started 
+# after the network is up (if your script needs internet access)
+#Requires=network.target
+#After=network.target
+
+[Service]
+# Type=oneshot is used for scripts that run once and exit.
+Type=oneshot
+
+# The user/group under which the script should run (change 'myuser' if needed)
+#User=myuser
+#Group=myuser
+
+# The command to execute
+# Use the full path to the Python interpreter and your script.
+ExecStart=/usr/bin/python3 -u /home/maintenance/moveNdelete/move_oldfiles.py /home/maintenance/moveNdelete/move_config.json
+
+# Optional: Set working directory for the script
+WorkingDirectory=/home/maintenance/moveNdelete
+
+# Optional: Restart policy in case the script fails (e.g., exit code > 0)
+# Restart=on-failure
