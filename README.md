@@ -11,7 +11,7 @@ put service, timer files in /etc/systemd/system
 
 ```bash
   sudo systemctl daemon-reload
-  sudo systemctl enable --now move_delete.timer
+  sudo systemctl enable --now move_old.timer
 ```
 
 
@@ -21,6 +21,6 @@ To run tests, run the following command
 
 ```bash
   sudo systemctl list-timers
-  sudo journalctl -u move_delete -r
+  sudo journalctl -u move_old -r
 ```
 
